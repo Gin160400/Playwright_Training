@@ -34,6 +34,7 @@ test('login new employee', async ({ page }) => {
   await page.locator("//input[@name='username']").fill(username);
   await page.locator("//input[@name='password']").fill(password);
   await page.locator("//button[@type='submit']").click();
+  //check .dev
 });
 })
 
