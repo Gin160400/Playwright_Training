@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { type } from 'os';
-
 var username = "Gindangg1604";
 var password = "Gin123456";
 
