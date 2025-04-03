@@ -15,11 +15,11 @@ test('login page', async ({ page }) => {
 
     await page.locator("//span[text()='Recruitment']").click();
     await page.locator("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']").click();
-    await page.locator("//span[text()='//input[@name='firstName']").fill("Gin");
-    await page.locator("//span[text()='//input[@name='lastName']']").fill("Dang");
-    await page.locator("//span[text()='//div[@class='oxd-select-text oxd-select-text--active']']").selectOption("Automation Testeraa");
-    await page.locator("//span[text()='(//input[@placeholder='Type here'])[1]']").fill("gindang@gmail.com");
-    await page.locator("//span[text()='(//input[@placeholder='Type here'])[2]']").fill("12345");    
+    await page.locator("//input[@name='firstName']").fill("Gin");
+    await page.locator("//input[@name='lastName']").fill("Dang");
+    await page.locator("//div[@class='oxd-select-text oxd-select-text--active']").selectOption("Automation Testeraa");
+    await page.locator("//input[@placeholder='Type here'])[1]']").fill("gindang@gmail.com");
+    await page.locator("//input[@placeholder='Type here'])[2]']").fill("12345");    
     
     await page.getByLabel('Upload file').setInputFiles(path.join(__dirname, 'Lesson+01_+exercises.pdf'));
 

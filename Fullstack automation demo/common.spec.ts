@@ -1,4 +1,5 @@
 import {test} from '@playwright/test'
+import { before } from 'node:test';
 
 test('Basic action', async({page}) => {
     await page.goto("https://material.playwrightvn.com/018-mouse.html");
@@ -33,6 +34,10 @@ test('Basic input', async({page}) => {
 
     //select option trong dropdown
     await page.locator("//select[@id='country']").selectOption("Canada");
-    
 
+    //upload file
+    await page.locator("input#profile").setInputFiles("file upload/exemple.jpg");
+
+    await page.locator("div.tooltip").hover();
+    
 })
